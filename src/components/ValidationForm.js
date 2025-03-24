@@ -37,6 +37,7 @@ const ValidationForm = () => {
 
   const validateStep = () => {
     const newErrors = {};
+
     if (step === 1) {
       if (!formData.name) newErrors.name = "Name is required";
       if (!formData.email) {
@@ -44,14 +45,23 @@ const ValidationForm = () => {
       } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
         newErrors.email = "Email is invalid";
       }
-      if (!formData.phone) newErrors.phone = "Phone is required";
+      if (!formData.phone) {
+        newErrors.phone = "Phone is required";
+      } else if (!/^\d{10}$/.test(formData.phone)) {
+        newErrors.phone = "Phone must be 10 digits";
+      }
     } else if (step === 2) {
       if (!formData.addressLine1)
         newErrors.addressLine1 = "Address Line 1 is required";
       if (!formData.city) newErrors.city = "City is required";
       if (!formData.state) newErrors.state = "State is required";
-      if (!formData.zipCode) newErrors.zipCode = "Zip Code is required";
+      if (!formData.zipCode) {
+        newErrors.zipCode = "Zip Code is required";
+      } else if (!/^\d{6}$/.test(formData.zipCode)) {
+        newErrors.zipCode = "Zip Code must be 6 digits";
+      }
     }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
