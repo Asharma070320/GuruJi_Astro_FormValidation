@@ -1,0 +1,42 @@
+.step {
+  margin-bottom: 20px;
+}
+.step h2 {
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875em;
+}
+
+.confirmation-details {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+  /* border: 2px solid; */
+}
+.confirmation-details p {
+  margin: 0.5rem 0rem;
+  /* border: 2px solid red; */
+}
