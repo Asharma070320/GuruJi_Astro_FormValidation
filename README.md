@@ -24,4 +24,4 @@ Data will be automatically saved to local storage as you progress through the st
 * All fields are required
 * Email must be valid format (user@example.com)
 * Phone must be at least 10 digits
-* ZIP code must be 5 digits
+* ZIP code must be 6 digits
